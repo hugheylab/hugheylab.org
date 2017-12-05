@@ -11059,3 +11059,59 @@ body {
 .memberbox .head {
   font-size: 21px;
 }
+@media (min-width: 768px) {
+  .navbar-nav {
+    font-size: 25px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-nav {
+    font-size: 30px;
+  }
+}
+.navbar-footer {
+  -webkit-box-flex: 1;
+          flex: 1 0 auto;
+}
+@media (max-width: 991px) {
+  .navbar-footer .navbar-header {
+    width: 100%;
+    float: none!important;
+    padding-left: 0;
+    margin: 0!important;
+  }
+  .navbar-footer .navbar-collapse {
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    border-top: none;
+    border-bottom: 1px solid  #e7e7e7;
+  }
+  .navbar-footer .navbar-collapse.collapse {
+    display: none!important;
+    height: 0!important;
+  }
+  .navbar-footer .navbar-collapse.collapse.in {
+    display: block!important;
+    height: auto!important;
+  }
+  .navbar-footer .navbar-toggle {
+    display: block;
+    margin-right: 0;
+  }
+  .navbar-footer .navbar-nav {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+    transition: padding 0;
+  }
+  .navbar-footer .navbar-nav li {
+    display: block;
+    float: none;
+  }
+  .navbar-footer .navbar-nav a {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+  }
+}
