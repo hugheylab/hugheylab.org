@@ -11070,8 +11070,7 @@ body {
   }
 }
 .navbar-footer {
-  -webkit-box-flex: 1;
-          flex: 1 0 auto;
+  min-height: auto;
 }
 @media (max-width: 991px) {
   .navbar-footer .navbar-header {
