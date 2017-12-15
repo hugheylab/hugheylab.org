@@ -1,0 +1,42 @@
+{{ define "main" }}
+<div class="blog-post">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="media">
+				<div class="media-body titlebox">
+					<div class="title media-heading">
+						{{ .Title }}
+					</div>
+					<!-- <div class="spacer"></div> -->
+					<div class="smallhead">
+						{{ $author := .Params.author }}
+						{{ range .Site.Pages }}
+							{{ if eq .Params.member_id $author }}
+								<a class="off" href="{{ .Permalink }}">{{ .Params.title }}</a><p>
+							{{ end }}
+						{{ end }}
+						{{ .Date.Format "2006-01-02" }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="spacer"></div>
+
+	<div class="row">
+		<div class="col-md-12">
+			{{if .Params.image }}
+				<img class="offset" src="{{ .Params.image }}">
+			{{end }}
+			<div class="post">
+				{{ .Content }}
+			</div>
+		</div>
+	</div>
+
+	<div class="bigspacer"></div>
+	<div class="spacer"></div>
+
+</div>
+{{ end }}

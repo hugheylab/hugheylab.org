@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- RSS feed -->
+
+		<!-- Customized Bootstrap + Font Awesome + Solarized -->
+		<link href="{{ .Site.BaseURL }}css/style.css" rel="stylesheet" media="screen">
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="{{.Site.BaseURL}}/assets/images/lab-logo.png"/>
+
+		<!-- Google Analytics -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+		<!-- jQuery -->
+		<script src="{{ .Site.BaseURL }}js/jquery.min.js"></script>
+
+		<!-- Bootstrap -->
+		<script src="{{ .Site.BaseURL }}js/transition.js"></script>
+		<script src="{{ .Site.BaseURL }}js/collapse.js"></script>
+		<script src="{{ .Site.BaseURL }}js/init.js"></script>
+
+	</head>
+
+	<body>
+	<div class="wrapper">
+		<div id="header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-element" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<!--{% if page.categories.first != 'home' %}-->
+						<a href="/"><img class="img-responsive logo navbar-brand" src="{{.Site.BaseURL}}/assets/images/lab-logo.png"></a>
+						<!--&lt;!&ndash;{% endif %}&ndash;&gt;-->
+						<a class="navbar-brand" href="/">{{ .Site.Title }}</a>
+					</div>
+					<div id="navbar-collapse-element" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							{{ $currentPage := . }}
+							{{ range .Site.Menus.main }}
+
+							<li {{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}} >
+								<a href="{{.URL}}">
+									<span>{{ .Name }}</span>
+								</a>
+								{{end}}
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<div class="content">
+			<div class="container">

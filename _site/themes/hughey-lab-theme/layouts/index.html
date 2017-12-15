@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+{{ block "main" . }}
+<div class="blog-post-home">
+	{{if .Params.image }}
+	<img class="offset" src="{{ .Params.image }}">
+	{{end }}
+	<div class="post">
+		{{ .Content }}
+	</div>
+</div>
+
+<div class="bigspacer"></div>
+<div class="spacer"></div>
+{{ end }}
+
+{{ partial "footer.html" . }}

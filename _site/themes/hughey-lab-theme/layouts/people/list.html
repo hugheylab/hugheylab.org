@@ -1,0 +1,93 @@
+{{ define "main" }}
+
+<div class="head media-heading">Current Members</div>
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="row">
+
+			{{ range (where .Data.Pages ".Params.position"  "Principal Investigator") }}
+			{{ if not ( isset .Params "alum" ) }}
+			<div class="col-md-4 memberbox">
+				<div class="media">
+					<a class="pull-left person-img-w" href="{{ .Permalink }}">
+						<img width=170 class="media-object" src="/assets/images/people/{{ .Params.image }}"/>
+					</a>
+					<div class="media-body">
+						<div class="head media-heading"><a href="{{ .Permalink }}" class="off">{{ .Params.title }}</a></div>
+						<p class="note">{{ .Params.position }}</p>
+					</div>
+				</div>
+				<div class="bigspacer"></div>
+				<div class="bigspacer"></div>
+			</div>
+			{{ end }}
+			{{ end }}
+
+			{{ range (where (where .Data.Pages ".Params.position" "!=" "Principal Investigator") ".Params.position" "!=" "Support Staff") }}
+			{{ if not (isset .Params "alum") }}
+			<div class="col-md-4 memberbox">
+				<div class="media">
+					<a class="pull-left person-img-w" href="{{ .Permalink }}">
+						<img width=170 class="media-object" src="/assets/images/people/{{ .Params.image }}"/>
+					</a>
+					<div class="media-body">
+						<div class="head media-heading"><a href="{{ .Permalink }}" class="off">{{ .Params.title }}</a></div>
+						<p class="note">{{ .Params.position }}</p>
+					</div>
+				</div>
+				<div class="bigspacer"></div>
+				<div class="bigspacer"></div>
+			</div>
+			{{ end }}
+			{{ end }}
+
+			{{ range (where .Data.Pages ".Params.position" "Support Staff") }}
+			{{ if not ( isset .Params "alum" ) }}
+			<div class="col-md-4 memberbox">
+				<div class="media">
+					<a class="pull-left person-img-w" href="{{ .Permalink }}">
+						<img width=170 class="media-object" src="/assets/images/people/{{ .Params.image }}"/>
+					</a>
+					<div class="media-body">
+						<div class="head media-heading"><a href="{{ .Permalink }}" class="off">{{ .Params.title }}</a></div>
+						<p class="note">{{ .Params.position }}</p>
+					</div>
+				</div>
+				<div class="bigspacer"></div>
+				<div class="bigspacer"></div>
+			</div>
+			{{ end }}
+			{{ end }}
+
+		</div>
+
+		<div class="head media-heading">Past Members</div>
+		<div class="bigspacer"></div>
+
+		<div class="row">
+			{{ range sort .Data.Pages ".Params.sort_name" }}
+
+			{{ if isset .Params "alum" }}
+			<div class="col-md-4 memberbox">
+				<div class="media">
+					<a class="pull-left person-img-w" href="{{ .Permalink }}">
+						<img width=170 class="media-object" src="/assets/images/people/{{ .Params.image }}"/>
+					</a>
+					<div class="media-body">
+						<div class="head media-heading"><a href="{{ .Permalink }}" class="off">{{ .Params.title }}</a></div>
+						<p class="note">{{ .Params.position }}</p>
+					</div>
+				</div>
+				<div class="bigspacer"></div>
+				<div class="bigspacer"></div>
+			</div>
+			{{ end }}
+
+			{{ end }}
+
+		</div>
+	</div>
+</div>
+{{ end }}

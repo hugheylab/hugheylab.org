@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{ $software := .Params}}
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="media row">
+
+			{{if $software.image }}
+			<div class="col-md-3">
+				<img class="pull-left pad-right media-object" src="/assets/images/software/{{ $software.image }}">
+			</div>
+			{{ end }}
+
+			<div class="col-md-9 {{ if not $software.image }} col-md-offset-3 {{end}}">
+				<div class="media-body titlebox">
+					<div class="title media-heading">
+						{{ $software.title }}
+					</div>
+<!-- 					<p>
+					<div class="smallhead">
+						{{ $software.description }}
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bigspacer"></div>
+
+<div class="row">
+	<div class="col-md-3">
+
+			{{ if $software.source }}
+			<div class="smallhead">
+			<i class="fa fa-file-code-o fa-fw"></i>
+			<a class="off" href="{{ $software.source }}">Source</a>
+			</div>
+			<div class="bigspacer"></div>
+			{{ end }}
+
+			{{ if $software.docker }}
+			<div class="smallhead smallhead-docker">
+				<svg viewBox="0 0 24 24" width="24px" height="24px">
+					<path style="fill:#333" d="M23.77,11.08a5.12,5.12,0,0,0-2.41-.77,2.7,2.7,0,0,0-.44,0,4.24,4.24,0,0,0-1.64-2.26.5.5,0,0,0-.64.07,4.06,4.06,0,0,0-.72,3.28.52.52,0,0,1-.13.41.45.45,0,0,1-.34.15H17V9.5a.5.5,0,0,0-.5-.5H14V3.5a.5.5,0,0,0-.5-.5h-3a.5.5,0,0,0-.5.5V6H4.5a.5.5,0,0,0-.5.5V9H1.5a.5.5,0,0,0-.5.5V12H.5a.5.5,0,0,0-.5.5C0,20.17,5.59,21,8,21a14.29,14.29,0,0,0,12.38-7.08,5.13,5.13,0,0,0,3.55-2.17A.5.5,0,0,0,23.77,11.08ZM16,12H14V10h2ZM5,12V10H7v2Zm3,0V10h2v2Zm5-5V9H11V7Zm-2,5V10h2v2Zm0-8h2V6H11ZM10,9H8V7h2ZM5,7H7V9H5ZM2,10H4v2H2Zm3,7a1,1,0,1,1,1-1A1,1,0,0,1,5,17Z"/>
+				</svg>
+				<a class="off" href="{{ $software.docker }}">Docker</a>
+			</div>
+			<div class="bigspacer"></div>
+			{{ end }}
+
+			{{ if $software.web_app }}
+			<div class="smallhead">
+			<i class="fa fa-external-link fa-fw"></i>
+			<a class="off" href="{{ $software.web_app }}">Web app</a>
+			</div>
+			<div class="bigspacer"></div>
+			{{ end }}
+
+	</div>
+	<div class="col-md-8">
+		<div class="post">
+			{{.Content}}
+
+			{{ $.Scratch.Add "papers_exist" "false" }}
+			{{ range .Site.Pages }}
+				{{ if in .Params.software_ids $software.software_id }}
+					{{ $.Scratch.Set "papers_exist" "true" }}
+				{{ end }}
+			{{ end }}
+
+			{{ $papers_exist :=  $.Scratch.Get "papers_exist" }}
+
+			{{ if eq $papers_exist "true" }}
+				<div class="bigspacer"></div>
+				<div class="head">Papers</div>
+				<div class="spacer"></div>
+				{{ range .Site.Pages }}
+					{{ if in .Params.software_ids $software.software_id }}
+						<p><a href="{{ .Permalink }}" class="off">{{ .Title }}, {{ .Params.short_ref }}</a></p>
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+
+{{ end }}
