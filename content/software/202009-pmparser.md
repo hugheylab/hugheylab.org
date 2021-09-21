@@ -6,7 +6,6 @@ software_id: pmparser
 description: Create and maintain a relational database of PubMed data
 site: https://pmparser.hugheylab.org
 source: https://github.com/hugheylab/pmparser
-docker: https://hub.docker.com/r/hugheylab/hugheyverse/
 ---
 
 pmparser provides a simple interface for extracting various elements from the publicly available PubMed/MEDLINE XML files, incorporating PubMed's regular updates, and combining the data with the NIH Open Citation Collection.

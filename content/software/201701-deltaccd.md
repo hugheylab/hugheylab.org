@@ -6,7 +6,6 @@ software_id: deltaccd
 description: Infer circadian clock progression using clock gene co-expression
 site: https://deltaccd.hugheylab.org
 source: https://github.com/hugheylab/deltaccd
-docker: https://hub.docker.com/r/hugheylab/hugheyverse/
 web_app: https://hugheylab.shinyapps.io/deltaccd
 ---
 
