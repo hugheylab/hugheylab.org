@@ -1,7 +1,10 @@
 {{ define "main" }}
 
-<div class="head media-heading">Preprints</div>
-<div class="bigspacer"></div>
+{{ $preprints := (where .Data.Pages ".Params.peer_reviewed"  false) }}
+{{if gt (len $preprints) 0}}
+	<div class="head media-heading">Preprints</div>
+	<div class="bigspacer"></div>
+{{end}}
 
 <div class="row">
 	{{range (where .Data.Pages ".Params.peer_reviewed"  false) }}
