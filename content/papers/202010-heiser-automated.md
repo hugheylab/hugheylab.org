@@ -11,8 +11,8 @@ peer_reviewed: true
 journal: Genome Research
 year: 2021
 doi: 10.1101/gr.271908.120
-pdf:
-supp:
+pdf: 2021-heiser-automated.pdf
+supp: https://genome.cshlp.org/content/31/10/1742/suppl/DC1
 pmid: 33837131
 reviews:
 results: https://github.com/codyheiser/dropkick-manuscript

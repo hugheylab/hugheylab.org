@@ -11,10 +11,10 @@ peer_reviewed: true
 journal: European Journal of Neuroscience
 year: 2021
 doi: 10.1111/ejn.15442
-pdf:
-supp:
+pdf: 2021-tackenberg-optogenetic.pdf
+supp: 2021-tackenberg-optogenetic-supp.zip
 pmid: 34486778
-reviews:
+reviews: https://publons.com/publon/10.1111/ejn.15442/
 results: https://doi.org/10.6084/m9.figshare.13519043
 software: 
 member_ids: [tackenbergmc, hugheyjj]
