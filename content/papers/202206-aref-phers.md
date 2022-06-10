@@ -6,7 +6,7 @@ title: "The phers R package: using phenotype risk scores based on electronic hea
 authors: Layla Aref, Lisa Bastarache, and Jacob J. Hughey
 preprint_journal: bioRxiv
 preprint_doi: 10.1101/2022.06.07.495133
-short_ref: Aref et al, bioRxiv
+short_ref: Aref et al., bioRxiv
 peer_reviewed: false
 journal: 
 year: 
