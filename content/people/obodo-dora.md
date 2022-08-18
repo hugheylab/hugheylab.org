@@ -5,7 +5,7 @@ position: PhD Student
 email: dora.obodo@vanderbilt.edu
 github: doraaobodo
 image: obodo-dora.jpg
-member_id: obododa
+member_id: obodod
 ---
 
 I received my B.S. in Bioengineering from George Mason University in Fairfax, VA in 2017. I am interested in harnessing machine learning and other computational tools to understanding biological processes.
