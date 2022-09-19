@@ -11,8 +11,8 @@ peer_reviewed: true
 journal: Bioinformatics
 year: 2022
 doi: 10.1093/bioinformatics/btac086
-pdf: 
-supp:
+pdf: 2022-irlmeier-cox.pdf
+supp: 2022-irlmeier-cox-supp.pdf
 pmid: 35157022
 reviews:
 results:

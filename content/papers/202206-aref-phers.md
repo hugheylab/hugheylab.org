@@ -1,19 +1,19 @@
 ---
-date: 2022-06-10
+date: 2022-09-09
 slug: 2022-aref-phers
 image: 2022-aref-phers.png
 title: "The phers R package: using phenotype risk scores based on electronic health records to study Mendelian disease and rare genetic variants"
 authors: Layla Aref, Lisa Bastarache, and Jacob J. Hughey
 preprint_journal: bioRxiv
 preprint_doi: 10.1101/2022.06.07.495133
-short_ref: Aref et al., bioRxiv
-peer_reviewed: false
-journal: 
-year: 
-doi: 
-pdf: 
-supp: 
-pmid: 
+short_ref: Aref et al., Bioinformatics 2022
+peer_reviewed: true
+journal: Bioinformatics
+year: 2022
+doi: 10.1093/bioinformatics/btac619
+pdf: 2022-aref-phers.pdf
+supp: 2022-aref-phers-supp.zip
+pmid: 36083022
 reviews: 
 results: https://doi.org/10.6084/m9.figshare.20016728
 software: /software/phers
