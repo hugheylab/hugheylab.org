@@ -1,20 +1,20 @@
 ---
-date: 2022-09-01
+date: 2022-11-07
 slug: 2022-schoenbachler-seeker
 image: 2022-schoenbachler-seeker.png
 title: "The seeker R package: simplified fetching and processing of transcriptome data"
 authors: Joshua L. Schoenbachler and Jacob J. Hughey
 preprint_journal: bioRxiv
 preprint_doi: 10.1101/2022.08.30.505820
-short_ref: Schoenbachler and Hughey, bioRxiv
-peer_reviewed: false
-journal: 
-year: 
-doi: 
-pdf: 
+short_ref: Schoenbachler and Hughey, PeerJ 2022
+peer_reviewed: true
+journal: PeerJ
+year: 2022
+doi: 10.7717/peerj.14372
+pdf: 2022-schoenbachler-seeker.pdf
 supp: 
-pmid: 
-reviews: 
+pmid: 36389425
+reviews: https://peerj.com/articles/14372/reviews/
 results: https://doi.org/10.6084/m9.figshare.20720848
 software: /software/seeker
 member_ids: [schoenbachlerjl, hugheyjj]
