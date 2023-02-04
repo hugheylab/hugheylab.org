@@ -3,7 +3,7 @@ date: 2022-11-23
 slug: 2022-obodo-sex
 image: 2022-obodo-sex.png
 title: "Sex Inclusion in Transcriptome Studies of Daily Rhythms"
-authors: Dora Obodo, Elliot H. Outland, and Jacob J. Hughey
+authors: Dora Obodo*, Elliot H. Outland*, and Jacob J. Hughey (*equal contribution)
 preprint_journal: bioRxiv
 preprint_doi: 10.1101/2022.08.18.504312
 short_ref: Obodo / Outland and Hughey, J Biol Rhythms 2022
