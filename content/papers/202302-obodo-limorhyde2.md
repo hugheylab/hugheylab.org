@@ -1,20 +1,20 @@
 ---
-date: 2023-02-03
+date: 2023-12-14
 slug: 2023-obodo-limorhyde2
 image: 2023-obodo-limorhyde2.png
 title: "LimoRhyde2: genomic analysis of biological rhythms based on effect sizes"
 authors: Dora Obodo*, Elliot H. Outland*, and Jacob J. Hughey (*equal contribution)
 preprint_journal: bioRxiv
 preprint_doi: 10.1101/2023.02.02.526897
-short_ref: Obodo / Outland and Hughey, bioRxiv
-peer_reviewed: false
-journal: 
-year: 
-doi: 
-pdf: 
-supp: 
-pmid: 
-reviews: 
+short_ref: Obodo / Outland and Hughey, PLOS One 2023
+peer_reviewed: true
+journal: PLOS One
+year: 2023
+doi: 10.1371/journal.pone.0292089
+pdf: 2023-obodo-limorhyde2.pdf
+supp: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0292089#sec013
+pmid: 38096249
+reviews: https://journals.plos.org/plosone/article/peerReview?id=10.1371/journal.pone.0292089
 results: https://doi.org/10.6084/m9.figshare.22001519
 software: /software/limorhyde2
 member_ids: [obodod, outlandeh, hugheyjj]
